@@ -1,0 +1,28 @@
+---
+
+- block:
+    - name: Get latest release of Atom
+      uri:
+        url: https://api.github.com/repos/atom/atom/releases/latest
+      register: atom_latest_release
+
+    - name: Set atom_version to latest release
+      set_fact:
+        atom_version: "{{ atom_latest_release.json.tag_name }}"
+  when: atom_version == 'latest'
+
+- name: Install Atom
+  dnf:
+    name: https://github.com/atom/atom/releases/download/{{ atom_version }}/atom.x86_64.rpm
+    state: present
+  become: yes
+
+- name: Get installed Atom packages
+  command: apm list --installed --bare
+  register: atom_packages_installed
+  changed_when: no
+
+- name: Install Atom packages
+  shell: apm install {{ item }}
+  with_items: "{{ atom_packages }}"
+  when: "(item + '@') not in atom_packages_installed.stdout"

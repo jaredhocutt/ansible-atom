@@ -1,0 +1,10 @@
+galaxy_info:
+  author: Jared Hocutt
+  description: Installs Atom and installs the Atom packages specified by the user.
+
+  min_ansible_version: 2.3
+
+  platforms:
+  - name: Fedora
+    versions:
+    - 27
