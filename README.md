@@ -30,6 +30,10 @@ None
       - jaredhocutt.atom
 ```
 
+## License
+
+BSD
+
 ## Author Information
 
 - Jared Hocutt \| [github](https://github.com/jaredhocutt) \| [twitter](http://twitter.com/jaredhocutt)
