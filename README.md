@@ -29,15 +29,3 @@ None
   roles:
       - jaredhocutt.atom
 ```
-
-## License
-
-BSD
-
-## Author Information
-
-Jared Hocutt [![GitHub][github_icon]](https://github.com/jaredhocutt) [![Twitter][twitter_icon]](http://twitter.com/jaredhocutt)
-
-
-[twitter_icon]: http://i.imgur.com/wWzX9uB.png
-[github_icon]: http://i.imgur.com/9I6NRUm.png
