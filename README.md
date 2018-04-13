@@ -19,7 +19,7 @@ None
 
 ## Example Playbook
 
-```
+```yaml
 - hosts: localhost
   vars:
     atom_version: v1.25.1
